@@ -77,7 +77,7 @@ const displayCurrentTimeLeftInSession = () => {
     function addLeadingZeros(time) {
         return time < 10 ? `0${time}` : time;
     }
-    if (hours > 0) result += `${hourse}:`
+    if (hours > 0) result += `${hourse}:`;
     result += `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
     pomodoroTimer.innerText = result.toString();
 };
@@ -111,6 +111,7 @@ const stepDown = () => {
         // timer is over, if work switch to break or vice versa
         if (type === 'Study / Work') {
             currentTimeLeftInSession = breakSessionDuration;
+            displaySessionLog('Study / Work');
             type = 'Break';
             title.innerText = 'Rest!';
             document.getElementById('pomodoro-pic').src = "images\rest.png";
