@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: thistle;
+    align-items: center;
 }
 
 img {
