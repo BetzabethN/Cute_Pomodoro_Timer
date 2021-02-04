@@ -1,4 +1,4 @@
-const pomodoroTimer = document.querySelector('#pomodoro-timer');
+//const pomodoroTimer = document.querySelector('#pomodoro-timer');
 
 const startButton = document.querySelector('#t-start');
 const pauseButton = document.querySelector('#t-pause');
