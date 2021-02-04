@@ -3,6 +3,7 @@ window.onload = function () {
     const displayT = document.querySelector("#pomodoro-timer");
     var timer = new Pomodoro({ displayT });
     timer.init();
+    timer.startTimer();
 };
 
 var Pomodoro = (function () {
