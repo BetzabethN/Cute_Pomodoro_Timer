@@ -6,7 +6,7 @@ function study() {
     minutes = 25;
     seconds = 0;
     p_title.innerText = "Study or Work!";
-    document.getElementById("#pomodoro-pic").src = "images\in-session.png";
+    document.getElementById("#pomodoro-pic").src = "images/in-session.png";
 
     var interval = setInterval(
         function() {
@@ -17,7 +17,7 @@ function study() {
                 el.innerHTML = "00:00";
                 el.style.backgroundColor = "red";
                 p_title.innerText = "Ready to start again?";
-                document.getElementById("#pomodoro-pic").src = "images\pause-session.png";
+                document.getElementById("#pomodoro-pic").src = "images/pause-session.png";
             }
             // if seconds is done, minus a minute
             else if (seconds == 0) {
@@ -43,7 +43,7 @@ function rest() {
     minutes = 5;
     seconds = 0;
     p_title.innerText = "Rest!";
-    document.getElementById("#pomodoro-pic").src = "images\rest.png";
+    document.getElementById("#pomodoro-pic").src = "images/rest.png";
 
     var interval = setInterval(
         function() {
@@ -54,7 +54,7 @@ function rest() {
                 el.innerHTML = "00:00";
                 el.style.backgroundColor = "red";
                 p_title.innerText = "Ready to start again?";
-                document.getElementById("#pomodoro-pic").src = "images\pause-session.png";
+                document.getElementById("#pomodoro-pic").src = "images/pause-session.png";
             }
             // if seconds is done, minus a minute
             else if (seconds == 0) {
