@@ -2,6 +2,7 @@ const pomodoroTimer = document.querySelector('#pomodoro-timer');
 const startButton = document.querySelector('#t-start');
 const pauseButton = document.querySelector('#t-pause');
 const stopButton = document.querySelector('#t-stop');
+const title = document.querySelector('#pomodoro-title');
 
 // add event listeners to buttons
 // START
@@ -43,6 +44,9 @@ const toggleClock = (reset) => {
             // pause the timer
             isClockRunning = false;
             clearInterval(clockTimer);
+            title.innerText = "Ready to start again?...";
+            document.getElementById('pomodoro-pic').src = "/images/pause-session.png";
+
         } else {
             // start the timer
             isClockRunning = true;
@@ -82,4 +86,12 @@ const stopClock = () => {
     currentTimeLeftInSession = workSessionDuration;
     // update timer displayed
     displayCurrentTimeLeftInSession();
+    // reset title and pic
+    title.innerText = 'Ready?';
+    document.getElementById('pomodoro-pic').src = "/images/before-start.png"; 
+}
+
+// update timer title and pic
+function updateTitleAndPic() {
+
 }
