@@ -3,6 +3,7 @@ const startButton = document.querySelector('#t-start');
 const pauseButton = document.querySelector('#t-pause');
 const stopButton = document.querySelector('#t-stop');
 const title = document.querySelector('#pomodoro-title');
+let type = 'Work';
 
 // add event listeners to buttons
 // START
@@ -52,7 +53,7 @@ const toggleClock = (reset) => {
             isClockRunning = true;
             clockTimer = setInterval(() => {
                 // decrease time left
-                currentTimeLeftInSession--;
+                stepDown();
                 displayCurrentTimeLeftInSession();
             }, 1000);
         }
@@ -88,10 +89,27 @@ const stopClock = () => {
     displayCurrentTimeLeftInSession();
     // reset title and pic
     title.innerText = 'Ready?';
-    document.getElementById('pomodoro-pic').src = "/images/before-start.png"; 
+    document.getElementById('pomodoro-pic').src = "/images/before-start.png";
+    type = 'Work'; 
 }
 
-// update timer title and pic
-function updateTitleAndPic() {
-
+const stepDown = () => {
+    if (currentTimeLeftInSession > 0) {
+        // decrease time left in session
+        currentTimeLeftInSession--;
+    } else if (currentTimeLeftInSession === 0) {
+        // timer is over, if work switch to break or vice versa
+        if (type === 'Work') {
+            currentTimeLeftInSession = breakSessionDuration;
+            type = 'Break'
+            title.innerText = 'Rest!';
+            document.getElementById('pomodoro-pic').src = "/images/rest.png";
+        } else {
+            currentTimeLeftInSession = workSessionDuration;
+            type = 'Work';
+            title.innerText = 'Study or Work!';
+            document.getElementById('pomodoro-pic').src = "/images/in-session.png";
+        }
+    }
+    displayCurrentTimeLeftInSession();
 }
