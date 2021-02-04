@@ -46,7 +46,7 @@ const toggleClock = (reset) => {
             isClockRunning = false;
             clearInterval(clockTimer);
             title.innerText = "Ready to start again?...";
-            document.getElementById('pomodoro-pic').src = "/images/pause-session.png";
+            document.getElementById('pomodoro-pic').src = "images\pause-session.png";
 
         } else {
             // start the timer
@@ -89,7 +89,7 @@ const stopClock = () => {
     displayCurrentTimeLeftInSession();
     // reset title and pic
     title.innerText = 'Ready?';
-    document.getElementById('pomodoro-pic').src = "/images/before-start.png";
+    document.getElementById('pomodoro-pic').src = "images\before-start.png";
     type = 'Work'; 
 }
 
@@ -103,12 +103,12 @@ const stepDown = () => {
             currentTimeLeftInSession = breakSessionDuration;
             type = 'Break'
             title.innerText = 'Rest!';
-            document.getElementById('pomodoro-pic').src = "/images/rest.png";
+            document.getElementById('pomodoro-pic').src = "images\rest.png";
         } else {
             currentTimeLeftInSession = workSessionDuration;
             type = 'Work';
             title.innerText = 'Study or Work!';
-            document.getElementById('pomodoro-pic').src = "/images/in-session.png";
+            document.getElementById('pomodoro-pic').src = "images\in-session.png";
         }
     }
     displayCurrentTimeLeftInSession();
