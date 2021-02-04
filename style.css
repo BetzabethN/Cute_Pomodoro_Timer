@@ -1,5 +1,5 @@
 body {
-    font-family: monospace;
+    font-family: 'Roboto Mono', monospace;
     background-color: thistle;
 }
 
@@ -8,6 +8,6 @@ img {
     height: 250px;
 }
 
-#pomodoro-timer {
+.timer {
     font-size: 50px;
 }

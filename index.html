@@ -2,40 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Cute Pomodoro Timer</title>
 
-        <!-- scripts and style -->
-        <script src="main.js"></script>
+        <!-- css, google font, and bootstrap -->
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 
     <body>
-        <div id="pomodoro-container">
-            <!-- title and pic -->
+        <!-- contains timer -->
+        <div id="container text-center">
+            <!-- title and pic (changes based on state of timer) -->
             <h1 id="pomodoro-title">Ready?</h1>
             <div id="pomodoro-pic">
                 <img src="images\before-start.png" alt="Ready?">
             </div>
 
-            <!-- div for countdown timer-->
-            <div id="pomodoro-timer">
-               <!-- <span id="pomodoro-minutes"></span>
-                <span id="middle">:</span>
-                <span id="pomodoro-seconds"></span>-->
+            <!-- timer -->
+            <div class="row">
+                <div class="col-4"></div>
+
+                <!-- displays timer -->
+                <div class="col-4 timer" id="timer">00:00</div>
+
+                <div class="col-4"></div>
             </div>
 
-            <!-- div for timer buttons
-            <div id="pomodoro-timer-actions">
-                <button id="t-start">Start</button>
-                <button id="t-pause">Pause</button>
-                <button id="t-stop">Stop</button>
-            </div>-->
+            <!-- start and pause -->
+            <div class="row">
+                <div class="col-4"></div>
 
-            <!-- display sessions -->
-            <div id="pomodoro-info">
-                <h3>Sessions</h3>
-                <ul id="pomodoro-sessions"></ul>
+                <!-- displays start -->
+                <div class="col-2" onclick="study()">Study / Work</div>
+
+                <!-- displays pause -->
+                <div class="col-2">Break</div>
+
+                <div class="col-4"></div>
             </div>
         </div>
+
+        <!-- timer scripts and bootstrap scripts-->
+        <script src="timerScript.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
     </body>
 </html>
