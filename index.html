@@ -18,9 +18,7 @@
         <div id="container text-center">
             <!-- title and pic (changes based on state of timer) -->
             <h1 id="pomodoro-title">Ready?</h1>
-            <div id="pomodoro-pic">
-                <img src="images\before-start.png" alt="Ready?">
-            </div>
+            <img id="pomodoro-pic" src="images\before-start.png" alt="Ready?">
 
             <!-- timer -->
             <div class="row">
@@ -37,10 +35,10 @@
                 <div class="col-4"></div>
 
                 <!-- displays start -->
-                <div class="col-2" onclick="studyBreak(25)">Study / Work</div>
+                <div class="col-2" onclick="study()">Start</div>
 
                 <!-- displays pause -->
-                <div class="col-2" onclick="studyBreak(5)">Break</div>
+                <div class="col-2" onclick="rest()">Break</div>
 
                 <div class="col-4"></div>
             </div>
