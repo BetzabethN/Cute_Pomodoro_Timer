@@ -7,3 +7,7 @@ img {
     width: 300px;
     height: 250px;
 }
+
+#pomodoro-timer {
+    font-size: 150px;
+}
