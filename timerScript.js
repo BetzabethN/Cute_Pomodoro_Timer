@@ -19,9 +19,6 @@ function study(callback) {
                 clearInterval(interval);
                 el.innerHTML = "00:00";
                 callback(); 
-                //return;
-                // p_title.innerText = "Ready to start again?";
-                // document.getElementById("pomodoro-pic").src = "images/pause-session.png";
             }
             // if seconds is done, minus a minute
             else if (seconds == 0) {
