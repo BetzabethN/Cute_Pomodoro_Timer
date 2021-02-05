@@ -12,12 +12,17 @@ img {
     margin-right: auto;
 }
 
+.par {
+    font-size: 2vmin;
+}
+
 .timer {
-    font-size: 50px;
+    font-size: 3.9vw;
 }
 
 h1 {
     text-align: center;
+    font-size: 5.9vw;
 }
 
 /* center page horizontally and vertically  */
