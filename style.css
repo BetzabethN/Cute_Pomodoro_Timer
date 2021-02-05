@@ -21,7 +21,7 @@ h1 {
 }
 
 /* center page horizontally and vertically  */
-.container {
+div.container {
     position: fixed;
     top: 50%;
     left: 50%;
