@@ -1,4 +1,4 @@
-# Cute_Pomodoro_Timer
+# Cute Pomodoro Timer
 Cute pomodoro timer to help you focus on your studies or work.
 
 Pressing 'Start' will start one cycle of a 25 minute Pomodoro timer and a 5 minute break.
