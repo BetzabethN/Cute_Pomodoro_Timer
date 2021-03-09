@@ -8,5 +8,5 @@ Looks best on computers.
 
 Try it out here: https://betzabethn.github.io/Cute_Pomodoro_Timer/
 
-###### Why I Created This
+#### Why I Created This
 To be more productive while studying, I wanted to create a habit of using the Pomodoro technique. However, all the timers I found online where very boring/unappealing to me so I decided to create a cute Pomodoro timer to motivate me to study hard.
