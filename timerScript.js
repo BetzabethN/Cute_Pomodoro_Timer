@@ -14,7 +14,7 @@ function study(callback) {
     var interval = setInterval(
         function() {
             var el = document.getElementById("timer");
-            // if countdown in done, clear it, and alert
+            // if countdown in done, clear it, and start rest period
             if (seconds == 0 && minutes == 0) {
                 clearInterval(interval);
                 el.innerHTML = "00:00";
